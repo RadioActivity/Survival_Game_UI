@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>하이드아웃</title>
+	<meta property="og:title" content="하이드아웃 서바이벌" /> 
+	<meta property="og:description" content="간단한 운빨망겜 생존게임" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+	<style></style>
+</head>
+<body>
+	<div id="main">
+		<div id="time" class="centerize">
+		523일차
+		</div>
+		<div class="health pad">
+			<div id="health" class="full prgs centerize" style="background-color: #00CC00; width: 0%">체력</div>
+		</div>
+		<div class="hunger pad">
+			<div id="hunger" class="full prgs centerize" style="background-color: #FFBB00; width: 0%">포만</div>
+		</div>
+		<div class="thirsty pad">
+			<div id="thirsty" class="full prgs centerize" style="background-color: #339fff; width: 0%">수분</div>
+		</div>
+		<div class="energy pad">
+			<div id="energy" class="full prgs centerize" style="background-color: #FFFF00; width: 0%">기력</div>
+		</div>
+		<div class="weight pad">
+			<div id="weight" class="full prgs centerize" style="background-color: #AAAAAA; width: 0%">중량</div>
+		</div>
+		<div class="display">
+			<div class="inv">
+				<div class="header centerize">인벤토리</div>
+				<div id="inv_field" class="inv_field"></div>
+			</div>
+			<div class="loot_and_stash">
+				<div id="stash_title" class="header centerize">창고</div>
+				<div id="loot_field" class="loot_5x5"></div>
+				<div id="act_field">
+					<!-- 수색상태에서는 다른건물수색/복귀 은신처 상태에서는 수색출발/수면 -->
+					<button id="act_1" class="act_btn">탐사 시작</button>
+					<button id="act_2" class="act_btn">탐사 종료</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<dialog id="item_status" style="display: none">
+		<div id="inspect_title" class="centerizeV"></div>
+		<div id="inspect_close" class="centerize">X</div>
+		<div id="inspect_lore"></div>
+		<div id="inspect_effects"></div>
+		<button id="inspect_act1">사용</button>
+		<button id="inspect_act2">버리기</button>
+	</dialog>
+	<dialog id="loot_table" style="display: none">
+		<div id="loot_table_title" class="centerizeV"></div>
+		<div id="loot_table_close" class="centerize">X</div>
+		<div id="loot_table_lore"></div>
+	</dialog>
+  <script src="items.json" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript"></script>
+</body>

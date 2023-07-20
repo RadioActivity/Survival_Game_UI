@@ -1,0 +1,131 @@
+items = [
+	{ //0
+		"name": "통조림",
+		"lore": "기본적인 식량입니다.",
+		"weight": 0.210,
+		"stackable": true,
+		"type": "food",
+		"tag": {
+			"hunger": 20
+		}
+	},
+	{ //1
+		"name": "물병",
+		"lore": "기본적인 식수입니다.",
+		"weight": 0.510,
+		"stackable": true,
+		"type": "food",
+		"tag": {
+			"thirsty": 45
+		}
+	},
+	{ //2
+		"name": "에너지드링크",
+		"lore": "적어도 급한건 해결해줍니다.",
+		"weight": 0.360,
+		"stackable": true,
+		"type": "food",
+		"tag": {
+			"thirsty": 25,
+			"energy": 20	
+		}
+	},
+	{ //3
+		"name": "구급상자",
+		"lore": "대부분의 상태이상을 치료합니다.",
+		"weight": 3.500,
+		"stackable": true,
+		"type": "consumable",
+		"tag": {
+			"health": 10,
+			"add_effect": [""],
+			"remove_effect": [""]
+		}
+	},
+	{ //4
+		"name": "고양이",
+		"lore": "고양이는 귀엽습니다.",
+		"weight": 4.54,
+		"stackable": false,
+		"type": "meterial",
+		"tag": {}
+	},
+	{ //5
+		"name": "손전등",
+		"lore": "수색에 큰 도움이 됩니다.",
+		"weight": 0.250,
+		"stackable": false,
+		"type": "light",
+		"tag": {
+			"durability": 128
+		}
+	},
+	{ //6
+		"name": "책가방",
+		"lore": "이제 교과서 말고 다른 것을 넣게 되었습니다.",
+		"weight": 0.600,
+		"stackable": false,
+		"type": "bag",
+		"tag": {
+			"add_capacity": 10,
+			"travel_speed": 0.9,
+			"search_speed": 0.9
+		}
+	},
+	{ //7
+		"name": "망치",
+		"lore": "박을 때 좋습니다.\n..못을 말이죠!",
+		"weight": 1.300,
+		"stackable": false,
+		"type": "weapon",
+		"tag": {
+			"attack_damage": 35,
+			"durability": 128
+		}
+	},
+	{ //8
+		"name": "진통제",
+		"lore": "통증을 하루정도 억제해줍니다.",
+		"weight": 0.150,
+		"stackable": true,
+		"type": "consumable",
+		"tag": {
+			"thirsty": -5,
+			"add_effect": [""],
+			"remove_effect": [""]
+		}
+	},
+	{ //9
+		"name": "붕대",
+		"lore": "출혈을 며칠정도 막아줍니다.",
+		"weight": 0.0,
+		"stackable": true,
+		"type": "armor",
+		"tag": {
+			"add_effect": [""],
+			"remove_effect": [""]
+		}
+	},
+	{ //10
+		"name": "",
+		"lore": "이게 왜 여기있는걸까요...",
+		"weight": 0.0,
+		"stackable": false,
+		"type": "armor",
+		"tag": {
+			"armor": 60,
+			"durability": 1024
+		}
+	},
+	{ //11
+		"name": "",
+		"lore": "이게 왜 여기있는걸까요...",
+		"weight": 0.0,
+		"stackable": false,
+		"type": "armor",
+		"tag": {
+			"armor": 60,
+			"durability": 1024
+		}
+	}
+]

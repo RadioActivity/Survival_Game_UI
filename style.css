@@ -1,0 +1,236 @@
+* {
+	font-size: 3.5vmin;
+}
+body {
+	background-color: #444444;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+dialog {
+	padding: 2vw;
+	top: 13vh;
+	width: 90%;
+	height: 60%;
+}
+dialog::backdrop {
+	background: #00000088;
+}
+#main button {
+	color: white;
+	background-color: #ffffff44;
+}
+#main {
+	height: 97.5%;
+	width: 95%;
+	position: absolute;
+	left: 50%;
+	top: 1%;
+	transform: translateX(-50%);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, 1fr) 75vh;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+.full {
+	width: 100%;
+	height: 100%;
+}
+.prgs {
+	white-space: nowrap;
+	overflow-x: hidden;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+}
+.centerize {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.centerizeV {
+	display: flex;
+	align-items: center;
+}
+.pad {
+	padding: 1vh 0 1vh 0;
+	background-clip: content-box;
+	background-color: grey;
+}
+#time {
+	grid-area: 1 / 1 / 2 / 3;
+	color: white;
+}
+.health {
+	grid-area: 2 / 1 / 2 / 3;
+}
+.hunger {
+	grid-area: 3 / 1 / 3 / 2;
+}
+.thirsty {
+	grid-area: 3 / 2 / 3 / 3;
+}
+.energy {
+	grid-area: 4 / 1 / 4 / 3;
+}
+.weight {
+	grid-area: 5 / 1 / 5 / 3;
+}
+.display {
+	border: 1px solid white;
+	grid-area: 6 / 1 / 6 / 3;
+	overflow-y: hidden;
+}
+.display::-webkit-scrollbar {
+	display: none; /* 크롬, 사파리, 오페라 */
+}
+.loading {
+	width: 50%;
+	animation: rotate 1s linear infinite;
+}
+.magnifier {
+	width: 50%;
+}
+@keyframes rotate{
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+.inv {
+	height: 10vh;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	overflow-y: hidden;
+}
+.inv_field {
+	padding: 0 .5vw 0px .5vw;
+	height: 70vh;
+	overflow-y: auto;
+}
+.stash_field {
+	padding: 0 .5vw 0px .5vw;
+	height: 50vh;
+	overflow-y: auto;
+}
+#inv_field::-webkit-scrollbar {
+	display: none; /* 크롬, 사파리, 오페라 */
+}
+.inv:hover {
+	height: 65vh;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+}
+.inv_btn {
+	width: auto;
+	overflow-x: hidden;
+}
+.loot_and_stash {
+	position: relative;
+	border-top: 1px solid white;
+	height: 90%;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+	overflow-y: hidden;
+}
+.header {
+	color: white;
+	width: 100%;
+	height: 5vh;
+	border-bottom: 1px solid white;
+}
+#loot_field {
+	padding: 0 .5vw 0px .5vw;
+}
+.loot_3x3 {
+	height: 50vh;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 1vw;
+	grid-row-gap: 1vw;
+}
+.loot_4x4 {
+	height: 50vh;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-column-gap: 1vw;
+	grid-row-gap: 1vw;
+}
+.loot_5x5 {
+	height: 50vh;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 1vw;
+	grid-row-gap: 1vw;
+}
+.loot_unknown {
+	background-color: transparent;
+}
+.loot_known {
+	
+}
+.inv_row {
+	margin-top: 1vw;
+	height: 17vw;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 1vw;
+}
+#act_field {
+	width: 100%;
+	height: 100%;
+	height: 9.5vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+.act_btn {
+	margin: .5vw;
+}
+#item_status {
+	display: grid;
+	grid-template-columns: 5fr 4fr 1fr;
+	grid-template-rows: 1fr 5fr 5fr 3fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+#inspect_title {
+	font-size: 3vh;
+	grid-area: 1 / 1 / 2 / 3;
+}
+#inspect_close {
+	font-size: 3vh;
+	grid-area: 1 / 3 / 2 / 4;
+}
+#inspect_lore {
+	grid-area: 2 / 1 / 3 / 4;
+}
+#inspect_effects {
+	grid-area: 3 / 1 / 4 / 4;
+}
+#inspect_act1 {
+	grid-area: 4 / 1 / 5 / 2;
+}
+#inspect_act2 {
+	grid-area: 4 / 2 / 5 / 4;
+}
+#loot_table {
+	display: grid;
+	grid-template-columns: 9fr 1fr;
+	grid-template-rows: 1fr 13fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+#loot_table_title {
+	grid-area: 1 / 1 / 2 / 2;
+}
+#loot_table_close {
+	grid-area: 1 / 2 / 2 / 3;
+}
+#loot_table_lore {
+	grid-area: 2 / 1 / 3 / 3;
+}
